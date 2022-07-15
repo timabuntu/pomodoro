@@ -1,0 +1,25 @@
+.button {
+  width: 100px;
+  height: 40px;
+}
+.primary {
+  background: purple;
+}
+
+.secondary {
+  background: orange;
+}
+
+.success {
+  background: green;
+}
+
+.warning {
+  background: yellow;
+}
+
+.danger {
+  background: red;
+}
+
+/* todos: link 09:39 */
