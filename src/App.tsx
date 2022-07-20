@@ -1,9 +1,12 @@
+import { Button } from './components/Button';
+
 export function App() {
   return (
-    <div className='App'>
-      <h1>Pomodoro</h1>
-    </div>
+    <main>
+      <Button colorVariant='default' />
+      <Button colorVariant='success' />
+      <Button colorVariant='warning' />
+      <Button />
+    </main>
   );
 }
-
-export default App;
