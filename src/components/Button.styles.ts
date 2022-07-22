@@ -1,26 +1,19 @@
 import styled, { css } from 'styled-components';
 
-export type Buttontype = 'success' | 'default' | 'danger' | 'warning';
+export type Buttontype = 'primary' | 'default' | 'secondary' | 'warning';
 
 interface ButtonContainerProps {
   colorStyle: Buttontype;
 }
 
-const color = {
-  success: 'green',
-  default: 'gray',
-  danger: 'red',
-  warning: 'orange',
-};
-
 export const ButtonContainer = styled.button<ButtonContainerProps>`
   width: 100px;
   height: 40px;
   margin: 0 4px;
-
-  ${(props) => {
-    return css`
-      background-color: ${color[props.colorStyle]};
-    `;
-  }}
+  border: none;
+  border-radius: 8px;
+  background-color: ${(props) => props.theme.primary};
+  color: ${(props) => props.theme.secondary};
+  font-weight: 700;
+  cursor: pointer;
 `;
