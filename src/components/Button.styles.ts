@@ -12,8 +12,8 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   margin: 0 4px;
   border: none;
   border-radius: 8px;
-  background-color: ${(props) => props.theme.primary};
-  color: ${(props) => props.theme.secondary};
+  background-color: ${(props) => props.theme['blue-500']};
+  color: ${(props) => props.theme.white};
   font-weight: 700;
   cursor: pointer;
 `;
