@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components'
 
-export type Buttontype = 'primary' | 'default' | 'secondary' | 'warning';
+export type Buttontype = 'primary' | 'default' | 'secondary' | 'warning'
 
 interface ButtonContainerProps {
-  colorStyle: Buttontype;
+  colorStyle: Buttontype
 }
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
@@ -16,4 +16,4 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   color: ${(props) => props.theme.white};
   font-weight: 700;
   cursor: pointer;
-`;
+`
