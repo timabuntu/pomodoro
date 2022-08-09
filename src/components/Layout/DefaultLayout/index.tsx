@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom'
+import { LayoutContainer } from './style'
 
 export function DefaultLayout() {
   return (
-    <div>
+    <LayoutContainer>
       <Outlet />
-    </div>
+    </LayoutContainer>
   )
 }
