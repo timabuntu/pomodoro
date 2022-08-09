@@ -30,6 +30,10 @@ export const HeaderContainer = styled.div`
       &:hover {
         border-bottom: 3px solid ${(props) => props.theme['blue-500']};
       }
+
+      &.active {
+        color: ${(props) => props.theme['blue-500']};
+      }
     }
   }
 `
