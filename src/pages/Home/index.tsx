@@ -1,3 +1,4 @@
+import { Play } from 'phosphor-react'
 import { HomeContainer } from './styles'
 
 export function Home() {
@@ -20,7 +21,10 @@ export function Home() {
           <span>0</span>
           <span>0</span>
         </div>
-        <button type="submit">Começar</button>
+        <button type="submit">
+          <Play />
+          Começar
+        </button>
       </form>
     </HomeContainer>
   )
