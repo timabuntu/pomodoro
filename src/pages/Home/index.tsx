@@ -22,7 +22,7 @@ export function Home() {
           <span>0</span>
         </div>
         <button type="submit">
-          <Play />
+          <Play size={24} />
           Começar
         </button>
       </form>
