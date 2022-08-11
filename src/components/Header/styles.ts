@@ -28,11 +28,11 @@ export const HeaderContainer = styled.div`
       border-bottom: 3px solid transparent;
 
       &:hover {
-        border-bottom: 3px solid ${(props) => props.theme['blue-500']};
+        border-bottom: 3px solid ${(props) => props.theme['red-500']};
       }
 
       &.active {
-        color: ${(props) => props.theme['blue-500']};
+        color: ${(props) => props.theme['red-500']};
       }
     }
   }
