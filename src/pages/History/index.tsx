@@ -17,31 +17,31 @@ export function History() {
           </thead>
           <tbody>
             <tr>
-              <td>Tarefa</td>
+              <td>Tarefa ...</td>
               <td>25 minutos</td>
               <td>há 2 dias</td>
               <td>Em andamento</td>
             </tr>
             <tr>
-              <td>Tarefa</td>
+              <td>Tarefa ...</td>
               <td>25 minutos</td>
               <td>há 2 dias</td>
               <td>Em andamento</td>
             </tr>
             <tr>
-              <td>Tarefa</td>
+              <td>Tarefa ...</td>
               <td>25 minutos</td>
               <td>há 2 dias</td>
               <td>Em andamento</td>
             </tr>
             <tr>
-              <td>Tarefa</td>
+              <td>Tarefa ...</td>
               <td>25 minutos</td>
               <td>há 2 dias</td>
               <td>Em andamento</td>
             </tr>
             <tr>
-              <td>Tarefa</td>
+              <td>Tarefa ...</td>
               <td>25 minutos</td>
               <td>há 2 dias</td>
               <td>Em andamento</td>
