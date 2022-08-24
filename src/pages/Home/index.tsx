@@ -47,6 +47,9 @@ export function Home() {
       task: data.task,
       minutesAmount: data.minutesAmount,
     }
+
+    setCycle((oldState) => [...cycle, newCycle])
+
     reset()
   }
 
