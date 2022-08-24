@@ -42,7 +42,11 @@ export function Home() {
   })
 
   function handleCreateNewCycle(data: NewCycleFormData) {
-    console.log(data)
+    const newCycle: Cycle = {
+      id: new Date().getTime(),
+      task: data.task,
+      minutesAmount: data.minutesAmount,
+    }
     reset()
   }
 
