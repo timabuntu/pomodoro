@@ -29,6 +29,7 @@ interface Cycle {
   task: string
   minutesAmount: number
   startDate: Date
+  interruptDate?: Date
 }
 
 type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
