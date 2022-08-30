@@ -107,6 +107,7 @@ export function Home() {
             id="task"
             list="task-list"
             placeholder="Dê um nome para o seu projeto"
+            disabled={!!activeCycle}
             {...register('task')}
           />
 
@@ -124,6 +125,7 @@ export function Home() {
             max={60}
             id="minutesAmount"
             placeholder="00"
+            disabled={!!activeCycle}
             {...register('minutesAmount', { valueAsNumber: true })}
           />
           <span>minutos.</span>
