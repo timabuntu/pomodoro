@@ -83,6 +83,16 @@ export function Home() {
 
   function handleInterruptCycle() {
     setActiveCycleId(null)
+
+    setCycles(
+      cycles.map((cycle) => {
+        if (cycle.id === activeCycleId) {
+          return { ...cycle, interruptedDate: new Date() }
+        } else {
+          return cycle
+        }
+      }),
+    )
   }
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
