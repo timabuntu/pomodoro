@@ -107,6 +107,8 @@ export function Home() {
   useEffect(() => {
     if (activeCycle) {
       document.title = `${minutes}:${seconds}`
+    } else {
+      document.title = `Pomodoro`
     }
   }, [minutes, seconds, activeCycle])
 
