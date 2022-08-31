@@ -102,8 +102,8 @@ export function Home() {
   function handleInterruptCycle() {
     setActiveCycleId(null)
 
-    setCycles(
-      cycles.map((cycle) => {
+    setCycles((oldState) =>
+      oldState.map((cycle) => {
         if (cycle.id === activeCycleId) {
           return { ...cycle, interruptedDate: new Date() }
         } else {
@@ -113,7 +113,6 @@ export function Home() {
     )
   }
 
-  const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
 
   const minutesAmount = Math.floor(currentSeconds / 60)
