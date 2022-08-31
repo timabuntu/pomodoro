@@ -30,6 +30,7 @@ interface Cycle {
   minutesAmount: number
   startDate: Date
   interruptDate?: Date
+  finishedDate?: Date
 }
 
 type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
