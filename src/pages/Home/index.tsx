@@ -62,8 +62,8 @@ export function Home() {
         )
 
         if (secondsDifference >= totalSeconds) {
-          setCycles(
-            cycles.map((cycle) => {
+          setCycles((oldState) =>
+            oldState.map((cycle) => {
               if (cycle.id === activeCycleId) {
                 return { ...cycle, finishedDate: new Date() }
               } else {
@@ -80,7 +80,7 @@ export function Home() {
     return () => {
       clearInterval(interval)
     }
-  }, [activeCycle])
+  }, [activeCycle, totalSeconds, activeCycleId])
 
   function handleCreateNewCycle(data: NewCycleFormData) {
     const id = String(new Date().getTime())
