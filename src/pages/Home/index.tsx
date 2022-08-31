@@ -71,6 +71,9 @@ export function Home() {
               }
             }),
           )
+
+          setAmountSecondsPassed(totalSeconds)
+          clearInterval(interval)
         } else {
           setAmountSecondsPassed(secondsDifference)
         }
