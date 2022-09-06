@@ -1,9 +1,13 @@
-import { Container } from './styles'
+import { CountDownContainer, Separator } from './styles'
 
 export function Countdown() {
   return (
-    <Container>
-      <h1>Countdown</h1>
-    </Container>
+    <CountDownContainer>
+      <span>{minutes[0]}</span>
+      <span>{minutes[1]}</span>
+      <Separator>:</Separator>
+      <span>{seconds[0]}</span>
+      <span>{seconds[1]}</span>
+    </CountDownContainer>
   )
 }
