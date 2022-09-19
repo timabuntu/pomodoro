@@ -80,7 +80,7 @@ export function Home() {
     <HomeContainer>
       <form onSubmit={handleSubmit(handleCreateNewCycle)}>
         <NewCycleForm />
-        <Countdown activeCycle={activeCycle} />
+        <Countdown activeCycle={activeCycle} setCycles={setCycles} />
         {activeCycle ? (
           <StopCountdownButton type="button" onClick={handleInterruptCycle}>
             <HandPalm size={24} />
