@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 
 import { NewCycleForm } from './components/NewCycleForm'
 // import { Countdown } from './components/Countdown'
@@ -19,6 +19,7 @@ interface Cycle {
   interruptDate?: Date
   finishedDate?: Date
 }
+const CyclesContext = createContext()
 
 export function Home() {
   const [cycles, setCycles] = useState<Cycle[]>([])
