@@ -3,12 +3,6 @@ import { useContext, useEffect, useState } from 'react'
 import { CyclesContext } from '../..'
 import { CountDownContainer, Separator } from './styles'
 
-interface CountdownProps {
-  activeCycle: any
-  setCycles: any
-  activeCycleId: any
-}
-
 export function Countdown() {
   const { activeCycle } = useContext(CyclesContext)
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0)
