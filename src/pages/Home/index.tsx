@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react'
 
 import { NewCycleForm } from './components/NewCycleForm'
-// import { Countdown } from './components/Countdown'
+import { Countdown } from './components/Countdown'
 
 import { HandPalm, Play } from 'phosphor-react'
 
@@ -10,7 +10,6 @@ import {
   StartCountdownButton,
   StopCountdownButton,
 } from './styles'
-import { Countdown } from './components/Countdown'
 
 interface Cycle {
   id: string
