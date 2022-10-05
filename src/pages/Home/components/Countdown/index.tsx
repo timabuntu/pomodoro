@@ -4,7 +4,7 @@ import { CyclesContext } from '../..'
 import { CountDownContainer, Separator } from './styles'
 
 export function Countdown() {
-  const { activeCycle } = useContext(CyclesContext)
+  const { activeCycle, activeCycleId } = useContext(CyclesContext)
   const [amountSecondsPassed, setAmountSecondsPassed] = useState(0)
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
