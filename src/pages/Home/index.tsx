@@ -19,7 +19,8 @@ interface Cycle {
   interruptDate?: Date
   finishedDate?: Date
 }
-const CyclesContext = createContext()
+
+const CyclesContext = createContext({})
 
 export function Home() {
   const [cycles, setCycles] = useState<Cycle[]>([])
@@ -79,25 +80,29 @@ export function Home() {
 
   return (
     <HomeContainer>
-      <form /* onSubmit={handleSubmit(handleCreateNewCycle)} */>
-        <NewCycleForm />
-        {/*  <Countdown
+      <CyclesContext.Provider value={}>
+        <form /* onSubmit={handleSubmit(handleCreateNewCycle)} */>
+          <NewCycleForm />
+          {/*  <Countdown
           activeCycle={activeCycle}
           setCycles={setCycles}
           activeCycleId={activeCycleId}
         /> */}
-        {activeCycle ? (
-          <StopCountdownButton type="button" onClick={handleInterruptCycle}>
-            <HandPalm size={24} />
-            Interromper
-          </StopCountdownButton>
-        ) : (
-          <StartCountdownButton /* disabled={isSubmitDisabled} */ type="submit">
-            <Play size={24} />
-            Começar
-          </StartCountdownButton>
-        )}
-      </form>
+          {activeCycle ? (
+            <StopCountdownButton type="button" onClick={handleInterruptCycle}>
+              <HandPalm size={24} />
+              Interromper
+            </StopCountdownButton>
+          ) : (
+            <StartCountdownButton
+              /* disabled={isSubmitDisabled} */ type="submit"
+            >
+              <Play size={24} />
+              Começar
+            </StartCountdownButton>
+          )}
+        </form>
+      </CyclesContext.Provider>
     </HomeContainer>
   )
 }
