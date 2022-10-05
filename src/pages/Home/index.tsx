@@ -23,7 +23,7 @@ interface Cycle {
 interface CyclesContextType {
   activeCycle: Cycle | undefined
 }
-const CyclesContext = createContext({} as CyclesContextType)
+export const CyclesContext = createContext({} as CyclesContextType)
 
 export function Home() {
   const [cycles, setCycles] = useState<Cycle[]>([])
