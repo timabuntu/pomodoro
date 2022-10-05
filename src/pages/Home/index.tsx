@@ -10,6 +10,7 @@ import {
   StartCountdownButton,
   StopCountdownButton,
 } from './styles'
+import { Countdown } from './components/Countdown'
 
 interface Cycle {
   id: string
@@ -81,7 +82,9 @@ export function Home() {
 
   return (
     <HomeContainer>
-      <CyclesContext.Provider value={{ activeCycle, activeCycleId }}>
+      <CyclesContext.Provider
+        value={{ activeCycle, activeCycleId, markCurrentCyclesAsFinished }}
+      >
         <form /* onSubmit={handleSubmit(handleCreateNewCycle)} */>
           <NewCycleForm />
           <Countdown />
