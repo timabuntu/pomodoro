@@ -83,14 +83,10 @@ export function Home() {
 
   return (
     <HomeContainer>
-      <CyclesContext.Provider value={}>
+      <CyclesContext.Provider value={{ activeCycle }}>
         <form /* onSubmit={handleSubmit(handleCreateNewCycle)} */>
           <NewCycleForm />
-          {/*  <Countdown
-          activeCycle={activeCycle}
-          setCycles={setCycles}
-          activeCycleId={activeCycleId}
-        /> */}
+          <Countdown />
           {activeCycle ? (
             <StopCountdownButton type="button" onClick={handleInterruptCycle}>
               <HandPalm size={24} />
