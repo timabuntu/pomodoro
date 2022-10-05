@@ -32,6 +32,18 @@ export function Home() {
 
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
 
+  function markCyclesAsFinished() {
+    setCycles((oldState) =>
+      oldState.map((cycle) => {
+        if (cycle.id === activeCycleId) {
+          return { ...cycle, finishedDate: new Date() }
+        } else {
+          return cycle
+        }
+      }),
+    )
+  }
+
   /* function handleCreateNewCycle(data: NewCycleFormData) {
     const id = String(new Date().getTime())
 
