@@ -23,6 +23,7 @@ interface Cycle {
 interface CyclesContextType {
   activeCycle: Cycle | undefined
   activeCycleId: string | null
+  markCurrentCyclesAsFinished: () => void
 }
 export const CyclesContext = createContext({} as CyclesContextType)
 
@@ -32,7 +33,7 @@ export function Home() {
 
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
 
-  function markCyclesAsFinished() {
+  function markCurrentCyclesAsFinished() {
     setCycles((oldState) =>
       oldState.map((cycle) => {
         if (cycle.id === activeCycleId) {
