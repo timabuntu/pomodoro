@@ -20,7 +20,10 @@ interface Cycle {
   finishedDate?: Date
 }
 
-const CyclesContext = createContext({})
+interface CyclesContextType {
+  activeCycle: Cycle | undefined
+}
+const CyclesContext = createContext({} as CyclesContextType)
 
 export function Home() {
   const [cycles, setCycles] = useState<Cycle[]>([])
